@@ -1,9 +1,10 @@
-import React, { useContext } from 'react'
-import { View, Text, Button, StyleSheet } from 'react-native'
-import { AuthContext } from '../../src/context/AuthContext'
+// app/(auth)/login.tsx
+import React, { useContext } from 'react';
+import { View, Text, Button, StyleSheet } from 'react-native';
+import { AuthContext } from '../../src/context/AuthContext';
 
 export default function LoginScreen() {
-  const { biometryType, authenticate } = useContext(AuthContext)
+  const { biometryType, authenticate } = useContext(AuthContext);
 
   return (
     <View style={styles.container}>
@@ -13,10 +14,10 @@ export default function LoginScreen() {
         onPress={authenticate}
       />
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
   title: { fontSize: 24, marginBottom: 16 },
-})
+});

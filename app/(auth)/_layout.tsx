@@ -1,16 +1,16 @@
-import React, { useContext, useEffect } from 'react'
-import { Slot, useRouter } from 'expo-router'
-import { AuthContext } from '../../src/context/AuthContext'
+// app/(auth)/_layout.tsx
+import React, { useContext } from 'react';
+import { Slot, Redirect } from 'expo-router';
+import { AuthContext } from '../../src/context/AuthContext';
 
 export default function AuthLayout() {
-  const { authenticated } = useContext(AuthContext)
-  const router = useRouter()
+  const { authenticated } = useContext(AuthContext);
 
-  useEffect(() => {
-    if (authenticated) {
-      router.replace('/(tabs)')
-    }
-  }, [authenticated])
+  // если уже залогинен, переходим сразу в табы
+  if (authenticated) {
+    return <Redirect href="/(tabs)" />;
+  }
 
-  return <Slot />
+  // иначе рендерим login.tsx внутри Slot
+  return <Slot />;
 }

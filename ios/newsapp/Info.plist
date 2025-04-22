@@ -74,8 +74,6 @@
     <key>UIUserInterfaceStyle</key>
     <string>Automatic</string>
     <key>UIViewControllerBasedStatusBarAppearance</key>
-    <key>NSFaceIDUsageDescription</key>
-    <string>Используется для авторизации по лицу</string>
     <false/>
   </dict>
 </plist>
