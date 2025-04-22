@@ -10,7 +10,8 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.kiyokata.newsapp"
+      "bundleIdentifier": "com.kiyokata.newsapp",
+      "plugins": ["react-native-biometrics"]
     },
     "android": {
       "adaptiveIcon": {

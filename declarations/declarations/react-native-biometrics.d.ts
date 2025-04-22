@@ -1,11 +1,17 @@
 declare module 'react-native-biometrics' {
+    export enum BiometryTypes {
+      TouchID = 'TouchID',
+      FaceID = 'FaceID',
+      Biometrics = 'Biometrics',
+    }
     export interface BiometryAvailability {
       available: boolean;
-      biometryType?: string | null;
+      biometryType?: BiometryTypes | null;
       error?: string;
     }
     export interface PromptResult {
       success: boolean;
+      signature?: string;
       error?: string;
     }
     export default class ReactNativeBiometrics {
@@ -17,5 +23,6 @@ declare module 'react-native-biometrics' {
         cancelButtonText?: string;
       }): Promise<PromptResult>;
     }
+    export { BiometryTypes };
   }
   
