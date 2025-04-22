@@ -9,5 +9,12 @@
     "skipLibCheck": true,
     "noEmit": true
   },
-  "include": ["app/**/*", "src/**/*", "declarations/**/*"]
+  "include": [
+    "app/**/*",
+    "src/**/*",
+    "declarations/**/*",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ],
+  "extends": "expo/tsconfig.base"
 }
